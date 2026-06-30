@@ -438,7 +438,7 @@
   <div class="logo">
     <div class="logo-icon">🌸</div>
     <div>
-      <div class="logo-name"><span class="ai">AI</span>tana</div>
+      <div class="logo-name">AItana</div>
       <div class="logo-sub">Asistente familiar</div>
     </div>
   </div>
@@ -649,6 +649,10 @@
   }
 
   // ── HELPERS ──────────────────────────────────────────────
+  function scrollToBottom() {
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+  }
+
   function appendMessage(role, text) {
     const msgs = document.getElementById('messages');
     const div  = document.createElement('div');
@@ -665,7 +669,7 @@
       </div>
     `;
     msgs.appendChild(div);
-    div.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    scrollToBottom();
     return div;
   }
 
@@ -686,7 +690,7 @@
       </div>
     `;
     msgs.appendChild(div);
-    div.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    scrollToBottom();
     return id;
   }
 
